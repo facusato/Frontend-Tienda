@@ -10,7 +10,7 @@ if (sessionStorage["carrito"]) {
   contador_productos = parseInt(sessionStorage.getItem("carrito"), 10);
 }
 if (sessionStorage["login"]) {
-  // Pasar a una funcion en Nav-utils
+ 
   menuProfileStore();
   const nav_login = document.querySelector("#nav_demo");
   const nav_salir = document.getElementById("nav_salir");
@@ -20,7 +20,6 @@ if (sessionStorage["login"]) {
   let storage_login = JSON.parse(sessionStorage.getItem("login"));
 
   var newtext = document.createTextNode(" " + storage_login.nombre);
-  //ver si va nombre o name
   nav_login.appendChild(newtext);
 } else menuUnregistered();
 
@@ -31,14 +30,12 @@ function receive() {
 window.onload = receive;
 
 
-//ver la url de abajo
 
 function traerProductos(vendedorid) {
   fetch(`http://localhost:8091/vendedor/${vendedorid}`)
     .then((res) => res.json())
     .then((data) => {
       h1.textContent = h1.textContent + ` ${data.nombre}`;
-      //ver si va products o productos
       data.productos.forEach((element) => {
         newItem(element);
       });
@@ -60,7 +57,6 @@ function newItem(data) {
   formaDePago.className = "formaDePago";
 
   prod.textContent = data.nombre;
-  //ver si va name o nombre
   descripcion.textContent = `Descripcion : ${data.descripcion}`;
   precio.textContent = `Precio : $ ${data.precio}`;
   stock.textContent = `Stock :  ${data.stock}`;

@@ -25,7 +25,7 @@ window.onload = receive;
 
 //este metodo tendria que tener en el feign para consultar de la api de compra
 function traerStore(producto) {
-  fetch(`http://localhost:8091/vendedor/productonombre?nombre=${producto}`)
+  fetch(`http://localhost:8093/cliente/productonombre?nombre=${producto}`)
     .then((res) => res.json())
     .then((data) => {
       if (data.length == 0) {
@@ -46,8 +46,6 @@ function newItem(data) {
  let numdiv = data.nombre;
 
   const vendedor = document.createElement("h1");
-  const dir = document.createElement("p");
-  const tel = document.createElement("p");
   const div_item_details = document.createElement("div");
   const div_item = document.createElement("div");
   vendedor.className = "p-vendedor text-light bg-danger";

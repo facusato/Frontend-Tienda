@@ -24,7 +24,7 @@ if (sessionStorage.getItem("carritoJSON").length > 0) {
   let total = 0;
   for (let i of data) {
     newItem(i);
-    total += i.price;
+    total += i.precio;
   }
   totalVista(total);
 }
@@ -52,10 +52,9 @@ function newItem(data) {
   formaDePago.className = "card-text";
   div_card_body.appendChild(producto);
   div_card_body.appendChild(precio);
-  div_card_body.appendChild(descripcion);
-  div_card_body.appendChild(stock);
-  div_card_body.appendChild(formaDePago);
-  //ver si necesito agregar el stock
+ // div_card_body.appendChild(descripcion);
+  //div_card_body.appendChild(stock);
+ // div_card_body.appendChild(formaDePago);
   div_card.appendChild(div_card_body);
 
   grid.appendChild(div_card);
