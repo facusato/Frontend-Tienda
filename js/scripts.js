@@ -11,7 +11,7 @@ btnSearch.addEventListener("click", (e) => {
 });
 
 function loginUsuario() {
-  // Si en el storage se encuentra un login , cambio al menu correspondiente (commprador o vendedor)
+  // Si en el storage se encuentra un login , cambio al menu correspondiente (comprador o vendedor)
   if (sessionStorage["login"]) { 
       menuProfileStore();
       const nav_login = document.querySelector("#nav_demo");

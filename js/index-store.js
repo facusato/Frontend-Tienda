@@ -3,7 +3,7 @@ const in_nombre = document.getElementById("input_nombre");
 const in_descripcion = document.getElementById("input_descripcion");
 const in_precio = document.getElementById("input_precio");
 const in_stock = document.getElementById("input_stock");
-const in_medioDePago = document.getElementById("input_formaDePago");
+const in_formaDePago = document.getElementById("input_formaDePago");
 
 function agregarProducto() {
   btn_addproducts.addEventListener("click", (e) => {
@@ -14,7 +14,6 @@ function agregarProducto() {
 }
 
 
-//  ver de porque llama a la url de ese store en particular
 function guardarProducto() {
   var url = "http://localhost:8091/vendedor/1";
   var data = {

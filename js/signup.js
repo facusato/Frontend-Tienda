@@ -55,20 +55,20 @@ async function guardarTienda() {
 }
 
 async function guardarCliente() {
-  const tienda_nombre = document.querySelector("#input_tienda-nombre");
-  const tienda_apellido = document.querySelector("#input_tienda-apellido");
-  const tienda_dni = document.querySelector("#input_tienda-dni");
-  const tienda_mail = document.querySelector("#input_tienda-mail");
-  const tienda_pass = document.querySelector("#input_tienda-pass");
+  const cliente_nombre = document.querySelector("#input_cliente-nombre");
+  const cliente_apellido = document.querySelector("#input_cliente-apellido");
+  const cliente_dni = document.querySelector("#input_cliente-dni");
+  const cliente_mail = document.querySelector("#input_cliente-mail");
+  const cliente_pass = document.querySelector("#input_cliente-pass");
 
   let url = "http://localhost:8091/usuario/save";
   let data = {
-    email: tienda_mail.value,
-    password: tienda_pass.value,
+    email: cliente_mail.value,
+    password: cliente_pass.value,
     rol: "cliente",
-    nombre: tienda_nombre.value,
-    apellido: tienda_apellido.value,
-    dni: tienda_dni.value,
+    nombre: cliente_nombre.value,
+    apellido: cliente_apellido.value,
+    dni: cliente_dni.value,
   };
 
   fetch(url, {
