@@ -22,8 +22,6 @@ function receive() {
 
 window.onload = receive;
 
-
-//este metodo tendria que tener en el feign para consultar de la api de compra
 function traerStore(producto) {
   fetch(`http://localhost:8093/cliente/productonombre?nombre=${producto}`)
     .then((res) => res.json())
@@ -39,9 +37,6 @@ function traerStore(producto) {
 }
 
 
-
-
-// ver porque esta funcion me pisa los campos
 function newItem(data) {
  let numdiv = data.nombre;
 
@@ -49,18 +44,13 @@ function newItem(data) {
   const div_item_details = document.createElement("div");
   const div_item = document.createElement("div");
   vendedor.className = "p-vendedor text-light bg-danger";
-  //dir.className = "p-store-details";
-  //tel.className = "p-store-details";
+ 
 
   vendedor.textContent = `${data.nombre}`;
-  //ver si tengo q cambiar store por vendedor
- // dir.textContent = `Direccion : ${data.address}`;
-  //tel.textContent = `Telefono : ${data.phone}`;
+
   div_item_details.className = "item__details";
   div_item.className = "item item--large";
   div_item_details.appendChild(vendedor);
-  //div_item_details.appendChild(dir);
-  //div_item_details.appendChild(tel);
   div_item.appendChild(div_item_details);
 
   grid.appendChild(div_item);

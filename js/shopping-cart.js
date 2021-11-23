@@ -52,7 +52,7 @@ function newItem(data) {
   formaDePago.className = "card-text";
   div_card_body.appendChild(producto);
   div_card_body.appendChild(precio);
- // div_card_body.appendChild(descripcion);
+  div_card_body.appendChild(descripcion);
   //div_card_body.appendChild(stock);
  // div_card_body.appendChild(formaDePago);
   div_card.appendChild(div_card_body);
