@@ -22,8 +22,8 @@ function guardarProducto() {
     precio: in_precio.value,
     stock: in_stock.value,
     formaDePago: in_formaDePago.value,
-    imagen: "algo.jpg",
-    //ver si puedo implementar la url de la foto
+    imagen: "imagen.jpg",
+    
   };
   console.log(data);
   fetch(url, {

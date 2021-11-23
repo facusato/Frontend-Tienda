@@ -100,7 +100,7 @@ function newItem(data,milista) {
 
   producto.textContent = `${data.nombre}`;
   precio.textContent = `$ ${data.precio}`;
-  stock.textContent = `$ ${data.stock}`;
+  stock.textContent = ` ${data.stock}`;
   descripcion.textContent = `${data.descripcion}`;
   formaDePago.textContent = `${data.formaDePago}`;
   div_card_body.className = "card-body";

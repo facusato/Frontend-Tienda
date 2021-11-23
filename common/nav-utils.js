@@ -18,7 +18,6 @@ function postForm(path, params, method = "GET") {
         const hiddenField = document.createElement("input");
         hiddenField.type = "hidden";
         hiddenField.name = key;
-        //ver a q refiere este name
         hiddenField.value = params[key];
         form.appendChild(hiddenField);
       }

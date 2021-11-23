@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-light bg-dark">
+        <span class="navbar-brand m-auto h1 text-white text-center p-4">Pedidos</span>
+    </nav>
+
+    <div id="messages" class="alert alert-success text-center" style="font-size: 20px; display: none;"></div>
+    
+    <div class="row justify-content-center">
+        <div id="pedido-details" class="text-center mt-5 p-2 col-md-4"></div>
+    </div>
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-8 nt-5">
+                <table class="table table-bordered table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th>IdPedido</th>
+                            <th>CodigoSeguim</th>
+                            <th>Estado</th>
+                            <th>Cliente</th>
+                            <th>Domicilio</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+            <div class="col-4 ml-auto" style="margin-top: 50px">
+                <div class="ml-5">
+                   
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control font-italic" id="estado" placeholder="Estado"/>
+                    </div>
+                  
+                    <div class="form-group">
+                        <input type="text" class="form-control font-italic" id="descripcion" placeholder="descripcion"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" class="form-control font-italic" id="idPedido" placeholder="IdPedido"/>
+                    </div>
+
+                    <input type="hidden" id="idReclamo" />
+
+                    <button id="agregar" class="btn btn-success btn-block">Agregar Reclamo</button>
+                    <button id="editar" class="btn btn-success btn-block" style="display:none">Editar Reclamo</button>
+                </div>
+            </div>
+
+            <div class="col-4 ml-auto" style="margin-top: 50px">
+                <div class="ml-5">
+                   
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control font-italic" id="est" placeholder="Estado"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control font-italic" id="categoria" placeholder="Categoria"/>
+                    </div>
+                  
+                    <div class="form-group">
+                        <input type="text" class="form-control font-italic" id="des" placeholder="Descripcion"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" class="form-control font-italic" id="id" placeholder="IdPedido"/>
+                    </div>
+
+                    <input type="hidden" id="IdDenuncia" />
+
+                    <button id="agregard" class="btn btn-success btn-block">Agregar Denuncia</button>
+                    <button id="editar" class="btn btn-success btn-block" style="display:none">Editar Denuncia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <script src="index-pedido.js"></script>
+</body>
+</html>

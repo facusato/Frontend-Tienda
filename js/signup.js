@@ -13,14 +13,12 @@ signInButton.addEventListener("click", () => {
 btn_tienda.addEventListener("click", (e) => {
   guardarTienda();
   e.preventDefault();
-  //Si funciona bien "success" y mal "ERROR"
   window.location.replace("success.html");
 });
 
 btn_cliente.addEventListener("click", (e) => {
   guardarCliente();
   e.preventDefault();
-  //Si funciona bien "success" y mal "ERROR"
   window.location.replace("success.html");
 });
 
@@ -60,6 +58,7 @@ async function guardarCliente() {
   const cliente_dni = document.querySelector("#input_cliente-dni");
   const cliente_mail = document.querySelector("#input_cliente-mail");
   const cliente_pass = document.querySelector("#input_cliente-pass");
+  const cliente_domicilio= document.querySelector("#input_cliente-domicilio");
 
   let url = "http://localhost:8091/usuario/save";
   let data = {
@@ -69,6 +68,7 @@ async function guardarCliente() {
     nombre: cliente_nombre.value,
     apellido: cliente_apellido.value,
     dni: cliente_dni.value,
+    domicilio: cliente_domicilio.value,
   };
 
   fetch(url, {

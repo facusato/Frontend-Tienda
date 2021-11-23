@@ -63,7 +63,6 @@ function newItem(data) {
   formaDePago.textContent = `FormaDePago : ${data.formaDePago}`;
   div_item_details.className = "item__details";
   div_item.className = "item item--large";
-  //div_item.style.backgroundImage=`url(/IMG_DB/product_${data.pic})`; //Change Image
   checkImage(`/IMG_DB/product_${data.imagen}`, function(){ div_item.style.backgroundImage=`url(/IMG_DB/product_${data.imagen})`; }, function(){ div_item.style.backgroundImage=`url(/IMG_DB/product_empty.jpg)`; } );
   div_item_details.appendChild(prod);
   div_item_details.appendChild(descripcion);

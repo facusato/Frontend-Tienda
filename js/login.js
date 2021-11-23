@@ -29,7 +29,7 @@ async function validarUsuario() {
         .then(data => {
             if (data != null) {
                 sessionStorage.setItem('login', JSON.stringify(data));
-                sessionStorage.setItem('carrito',0); // MODIFICAR : Guardar JSON de producto
+                sessionStorage.setItem('carrito',0); 
                 sessionStorage.setItem('carritoJSON',new Array());
                 window.location.replace("index.html");
             }
